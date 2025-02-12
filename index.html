@@ -3,41 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine's Day '25</title>
+    <title>Valentines Day '25</title>
     <style>
-        html {
-            background-color: antiquewhite;
-            font-family: "Protest Riot", sans-serif;
-        }
-        h1 {
-            text-align: left;
-        }
-        h2 {
-            text-align: center;
-            font-family: "Protest Riot", sans-serif;
-            font-size: 200%;
-        }    
-        img.animated-gif {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 40%;
-        }
-        img.not_really_an_option {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 80%;
-            cursor: pointer;
-        }
-        .sub_div {
-            position: absolute;
-            bottom: 2px;
-            background-color: #b54f68;
-            color: #ffffff;
-            width: 100%;
-            text-align: center;
-        }
+    html{
+        background-color: antiquewhite;
+        font-family: "Protest Riot", sans-serif;
+    }
+    h1{
+        text-align: left;
+    }
+    h2{
+        text-align: center;
+        font-family: "Protest Riot", sans-serif;
+        font-size: 200%;
+    }    
+    img.animated-gif{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+    }
+    img.not_really_an_option{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+    .sub_div {
+        position: absolute;
+        bottom: 2px;
+        background-color: #b54f68;
+        color: #ffffff;
+    }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,33 +44,9 @@
     <img class="animated-gif" src="./love-heart.gif">
     <h1>Hey luv!</h1>
     <h2>Will you be my valentine?</h2>
+    <a href="./yes.html"><img class="not_really_an_option" src="./yes-removebg-preview.png" alt="yes"></a>
+    <a href="./yes2.html"><img class="not_really_an_option" src="./yes__1_-removebg-preview.png"></a>
+            <marquee class="sub_div">---- made by krishna ----</marquee>
 
-    <a href="./yes.html" onclick="trackClick('yes')">
-        <img class="not_really_an_option" src="./yes-removebg-preview.png" alt="yes">
-    </a>
-    
-    <a href="./yes2.html" onclick="trackClick('yes2')">
-        <img class="not_really_an_option" src="./yes__1_-removebg-preview.png" alt="yes2">
-    </a>
-
-    <p>Yes clicked: <span id="yesCount">0</span> times</p>
-    <p>Yes2 clicked: <span id="yes2Count">0</span> times</p>
-
-    <marquee class="sub_div">---- made by krishna ----</marquee>
-
-    <script>
-        function trackClick(button) {
-            let count = localStorage.getItem(button) || 0;
-            count++;
-            localStorage.setItem(button, count);
-            document.getElementById(button + "Count").innerText = count;
-        }
-
-        // Load stored values on page load
-        document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("yesCount").innerText = localStorage.getItem("yes") || 0;
-            document.getElementById("yes2Count").innerText = localStorage.getItem("yes2") || 0;
-        });
-    </script>
 </body>
 </html>
